@@ -44,6 +44,10 @@ Constats de la construction (Phase 6), sans écart restant :
 - La règle « pas de px » relevait `calc(infinity * 1px)` (pilule) : écrit en rem.
 - Largeur du texte : les coupures des paragraphes de l'image FM tiennent pour une largeur de 208,1 à 212,1 px ; les colonnes donnent 210,7 px.
 
-## 4. Verdict
+## 4. En ligne (Phase 12)
 
-Conforme à la spec et à la maquette validée (G3). Prêt pour la Phase 9 (README).
+`BASE_URL=https://ounokoya.github.io/front-3-column-preview-card/ npx playwright test --workers=2` : **32 réussis sur 32**, écarts visuels identiques au local (1,96 %, 2,92 % et 3,68 %), sur la v2.0.0 déployée depuis la branche `gh-pages` (publication avec l'accord de Koya, 2026-11-05). GitHub a activé Pages de lui-même à la première publication de la branche `gh-pages`.
+
+## 5. Verdict
+
+Conforme à la spec et à la maquette validée (G3). README fait (Phase 9) ; v2.0.0 en ligne. Prêt pour « Edit solution » sur FM (Phase 13).
