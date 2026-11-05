@@ -1,6 +1,6 @@
 # Maquette Penpot — 3-column preview card component (refonte v2.0.0)
 
-> SDL-FM 1.5.0 Phase 3 (remise à niveau, étape B, lot 3). Fichier Penpot : « FM Newbie » (créé par Koya ; nom vérifié avant chaque écriture), page « 3-column ». **En attente de G3.**
+> SDL-FM 1.5.0 Phase 3 (remise à niveau, étape B, lot 3). Fichier Penpot : « FM Newbie » (créé par Koya ; nom vérifié avant chaque écriture), page « 3-column ». **Validée (G3, 2026-11-05)** avec les propositions : cartes empilées de 327 px centrées en tablette (G3-1), seuils de 5 %, 5 % et 5,1 % (G3-2), titres en Big Shoulders Display (G3-3).
 > Décisions G2 appliquées : texte vert foncé sur la carte Sedans (Q-A1, proposition A), paragraphe SUVs à 80 % (Q-A2), liens « Learn More » (Q-B1), titres (Q-B2), icônes décoratives (Q-B3), cartes empilées sous 1024 px (Q-B4).
 
 ## Rendu des exports

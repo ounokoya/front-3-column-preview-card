@@ -37,3 +37,13 @@ Koya : « Je valide (G2) » pour le lot 3. Toutes les propositions sont retenues
 | Q-B3 | Icônes | Décoratives, `alt=""` |
 | Q-B4 | Pas de maquette tablette | Colonnes dès 1024 px ; en dessous, cartes empilées de 327 px au plus, centrées |
 | Q-B5 | Refonte | Même dépôt en v2.0.0, GitHub Pages, « Edit solution » |
+
+## Maquette validée (G3, 2026-11-05)
+
+Koya : « Je valide (G3) » pour le lot 3. Maquette : `specs/visuel/penpot/maquette.md`. Toutes les propositions sont retenues.
+
+| # | Point | Décision |
+|---|---|---|
+| G3-1 | Tablette (Q-B4) | Cartes empilées de 327 px, centrées, sous 1024 px |
+| G3-2 | Seuils visuels | 5 % (desktop), 5 % (états), 5,1 % (mobile) |
+| G3-3 | Police des titres | Big Shoulders Display 700, 40 px (celle des images FM ; la famille « Big Shoulders » du guide est 13 % plus large) |
