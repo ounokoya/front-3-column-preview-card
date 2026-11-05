@@ -23,3 +23,17 @@ Plan validé (G1, 2026-11-05) au niveau du programme : `frontmentor/specs/plan-r
 ## Analyse (Phase 2)
 
 `specs/visuel/front-3-column-preview-card-analyse.png` (et `.excalidraw`).
+
+## Analyse validée (G2, 2026-11-05)
+
+Koya : « Je valide (G2) » pour le lot 3. Toutes les propositions sont retenues.
+
+| # | Point | Décision |
+|---|---|---|
+| Q-A1 | Carte Sedans : texte 2,13 à 2,41:1 sur l'or | **Proposition A** : l'or est gardé ; texte de cette carte en vert très foncé `hsl(179, 100%, 10%)` #003332 (5,13:1) ; bouton : fond Gray 100, texte vert foncé ; survol : contour et texte vert foncé |
+| Q-A2 | Carte SUVs : paragraphe à 75 % 4,38:1 | Blanc à 80 % : 4,76:1 |
+| Q-B1 | « Learn More » sans destination | Liens `href="#"` ; nom distinct : « Learn More » suivi de « about sedans » masqué |
+| Q-B2 | Titres | `h1` masqué « Choose your car » ; un `h2` par carte |
+| Q-B3 | Icônes | Décoratives, `alt=""` |
+| Q-B4 | Pas de maquette tablette | Colonnes dès 1024 px ; en dessous, cartes empilées de 327 px au plus, centrées |
+| Q-B5 | Refonte | Même dépôt en v2.0.0, GitHub Pages, « Edit solution » |
