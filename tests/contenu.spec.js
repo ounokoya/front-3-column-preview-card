@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { open, pageTitle, cards, card, learn, style, cssColor, CARDS, ABOUT } from './helpers.js'
+import { open, pageTitle, cards, card, learn, style, cssColor, paint, CARDS, ABOUT } from './helpers.js'
 
 // Spec §2, §3 et §6 — S6 à S9
 
@@ -51,7 +51,7 @@ test('S8 — couleurs des cartes, titres, paragraphes et liens (Q-A1, Q-A2)', as
     const c = COLORS[name]
     expect(await style(card(page, name), 'backgroundColor'), `fond ${name}`).toBe(await cssColor(page, c.bg))
     expect(await style(page.getByRole('heading', { level: 2, name, exact: true }), 'color'), `titre ${name}`).toBe(await cssColor(page, c.title))
-    expect(await style(card(page, name).locator('p').first(), 'color'), `paragraphe ${name}`).toBe(await cssColor(page, c.para))
+    expect(await paint(page, await style(card(page, name).locator('p').first(), 'color')), `paragraphe ${name}`).toEqual(await paint(page, c.para))
     expect(await style(learn(page, ABOUT[name]), 'backgroundColor'), `fond du lien ${name}`).toBe(gray)
     expect(await style(learn(page, ABOUT[name]), 'color'), `texte du lien ${name}`).toBe(await cssColor(page, c.btn))
   }
