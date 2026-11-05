@@ -1,1 +1,76 @@
 @import "tailwindcss";
+/* ADR-0004 : Big Shoulders Display (G3-3) et Lexend Deca servies avec le site */
+@import "@fontsource/big-shoulders-display/700";
+@import "@fontsource/lexend-deca/400";
+
+/* ADR-0003 : tokens de la bibliothèque Penpot (specs/visuel/penpot/maquette.md) */
+@theme {
+  --color-*: initial;
+  --color-white: hsl(0, 0%, 100%);
+  --color-gold-500: hsl(31, 77%, 52%);
+  --color-cyan-800: hsl(184, 100%, 22%);
+  --color-green-950: hsl(179, 100%, 13%);
+  --color-gray-100: hsl(0, 0%, 95%);
+  --color-green-aa: hsl(179, 100%, 10%); /* Q-A1 : texte de la carte Sedans, 5,13:1 sur l'or */
+  --color-link: hsl(228, 45%, 44%); /* liens de l'attribution (starter) */
+
+  --font-display: "Big Shoulders Display", sans-serif;
+  --font-sans: "Lexend Deca", sans-serif;
+  --text-title: 2.5rem;
+  --text-title--line-height: 1;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.5625rem;
+  --text-attribution: 0.6875rem;
+  --text-attribution--line-height: 1.5;
+
+  --radius-card: 0.5rem;
+}
+
+/* ADR-0005 : « Learn More » ; --ink : couleur du survol et du focus (Gray 100, vert foncé sur Sedans) ;
+   transition des couleurs seulement (jamais outline-color, M35) */
+@utility learn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: calc(var(--spacing) * 36.5);
+  block-size: calc(var(--spacing) * 12);
+  padding-block-end: calc(var(--spacing) / 2);
+  border: calc(var(--spacing) / 2) solid var(--color-gray-100);
+  border-radius: calc(infinity * 1rem);
+  background-color: var(--color-gray-100);
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
+  transition: color 200ms, background-color 200ms, border-color 200ms;
+  &:hover {
+    border-color: var(--ink);
+    background-color: transparent;
+    color: var(--ink);
+  }
+  &:focus-visible {
+    outline: calc(var(--spacing) / 2) solid var(--ink);
+    outline-offset: calc(var(--spacing) * 0.75);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+/* liens de l'attribution, soulignés sauf au survol ; contour de focus de 2 px décalé de 2 px */
+@utility link {
+  color: var(--color-link);
+  text-decoration-line: underline;
+  &:hover {
+    text-decoration-line: none;
+  }
+  &:focus-visible {
+    outline: 0.125rem solid var(--color-link);
+    outline-offset: 0.125rem;
+  }
+}
+
+@layer base {
+  body {
+    /* largeurs de lettres non arrondies au pixel : les lignes se coupent comme sur l'image FM */
+    text-rendering: geometricPrecision;
+  }
+}
