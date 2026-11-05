@@ -47,3 +47,10 @@ Koya : « Je valide (G3) » pour le lot 3. Maquette : `specs/visuel/penpot/maque
 | G3-1 | Tablette (Q-B4) | Cartes empilées de 327 px, centrées, sous 1024 px |
 | G3-2 | Seuils visuels | 5 % (desktop), 5 % (états), 5,1 % (mobile) |
 | G3-3 | Police des titres | Big Shoulders Display 700, 40 px (celle des images FM ; la famille « Big Shoulders » du guide est 13 % plus large) |
+
+## Spec, ADR et verrou code (2026-11-05)
+
+- Spec : `specs/specifications/3-column-preview-card-component.md` ; tests écrits avant le code, contrôle rouge fait (voir les commits `test:`).
+- ADR : `specs/adr/v2.0/` (ADR-0003 à ADR-0006) et leurs fitness functions, contrôle rouge fait.
+- Polices : Koya accepte le téléchargement des paquets Fontsource (ADR-0004).
+- **Verrou code** : Koya confirme « Claude écrit le code ».
